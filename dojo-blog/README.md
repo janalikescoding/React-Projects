@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##Tips
+
+You may use json-server which will watch the data/db.json file and mocks it to act like a data server by createing various POST,DELETE,GET and POST endpoints.
+
+Refer https://www.npmjs.com/package/json-server
+
+To start a json-server use the command
+
+`npx json-server --watch data/db.json --port 8000`
+
+You might see a same-origin error then add the below flag
+
+`npx json-server --watch data/db.json --port 8000 --middlewares data/server.js `
+
 ## Available Scripts
 
 In the project directory, you can run:
