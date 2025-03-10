@@ -1,6 +1,10 @@
 import './App.css';
 import Navbar from './Navbar';
 import Home from './Home';
+import Create from './Create';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BlogDetails from './BlogDetails';
+import NotFound from './NotFound';
 
 // function App() {
 //   const title = 'Welcome to the new blog';
@@ -31,12 +35,27 @@ import Home from './Home';
 
 function App(){
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <Navbar />
       <div className="content">
-        <Home />
+        <Switch> {/* From version 6 and up, need to use <Routes> instead*/}
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/create'>
+            <Create />
+          </Route>
+          <Route path='/blogs/:id'>
+            <BlogDetails />
+          </Route>
+          <Route path='*'> {/* Catch any other route. Make sure to place it at the last case because placing it above will be an obstruction. */}
+            <NotFound />
+          </Route>
+        </Switch>
       </div>
     </div>
+    </Router>
   );
 };
 
