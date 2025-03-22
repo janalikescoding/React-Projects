@@ -5,6 +5,7 @@ import Create from './blogs/Create';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogDetails from './blogs/BlogDetails';
 import NotFound from './NotFound';
+import TidBit from './tidbits/Tidbit';
 
 // function App() {
 //   const title = 'Welcome to the new blog';
@@ -48,6 +49,9 @@ function App(){
           </Route>
           <Route path='/blogs/:id'>
             <BlogDetails />
+          </Route>
+          <Route path='/fun'>
+            <TidBit />
           </Route>
           <Route path='*'> {/* Catch any other route. Make sure to place it at the last case because placing it above will be an obstruction. */}
             <NotFound />

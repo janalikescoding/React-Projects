@@ -11,6 +11,7 @@ const Navbar = () => {
                 backgroundColor: "#f1356d",
                 borderRadius: "8px"
             }}>New Blog</Link>
+            <Link to="/fun">Fun Button</Link>
         </div>
     </nav> 
     );
