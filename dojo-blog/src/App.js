@@ -5,7 +5,7 @@ import Create from './blogs/Create';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BlogDetails from './blogs/BlogDetails';
 import NotFound from './NotFound';
-import TidBit from './tidbits/Tidbit';
+import TidBit from './tidbits/tidbit';
 
 // function App() {
 //   const title = 'Welcome to the new blog';
